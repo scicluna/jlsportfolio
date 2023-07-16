@@ -1,4 +1,18 @@
-<h1 class="text-6xl">Welcome to SvelteKit</h1>
-<p>
-  Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
-</p>
+<script>
+  import Banner from "$lib/components/Banner.svelte"
+  import About from "$lib/components/About.svelte"
+</script>
+
+<main class="h-[100dvh] w-[100dvw] bg-slate-300">
+  <!-- banner -->
+  <!-- portrait -->
+  <!-- cheezy one liner -->
+  <Banner />
+  <!-- about me -->
+  <About />
+</main>
+
+<!-- timeline -->
+
+<!-- throaway footer w/ links -->
+<!-- seperate resume/contact form pages -->
