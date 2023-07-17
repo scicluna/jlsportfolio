@@ -1,4 +1,5 @@
-type Event = {
+export type Event = {
+    id: number,
     name: string,
     short: string,
     long: string,
@@ -7,5 +8,33 @@ type Event = {
 }
 
 export const eventlist: Event[] = [
-    { name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 0, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 1, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 2, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 3, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 4, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 5, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 6, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 7, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 8, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 9, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 10, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 11, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 12, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 13, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 14, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 15, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 16, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 17, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 18, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 19, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 20, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 21, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 22, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 23, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 24, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 25, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 26, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 27, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
+    { id: 28, name: "EdX MSU Full Flex Bootcamp", short: "I started bootcamp november 2022.", long: "I started bootcamp november 2022.", img: "https://www.edx.org/sites/default/files/school/image/banner/msu_0.jpg", link: "https://www.edx.org/school/msu" },
 ]

@@ -7,7 +7,7 @@
   export let data: PageData
 </script>
 
-<main class="h-[100dvh] w-[100dvw] bg-slate-300">
+<main class="h-[100dvh] bg-slate-300">
   <!-- banner -->
   <!-- portrait -->
   <!-- cheezy one liner -->
