@@ -38,8 +38,11 @@
       in:fly={{ x: vector, duration: 2000 }}
       out:fly={{ x: vector, duration: 2000 }}
       class="text-5xl w-full flex {direction === 'LEFT'
-        ? 'justify-start pl-20'
-        : 'justify-end pr-20'}"
+        ? 'justify-start'
+        : 'justify-end'}"
+      style={direction === "LEFT"
+        ? `padding-left: ${Math.random() * 12}vw;`
+        : `padding-right: ${Math.random() * 12}vw`}
     >
       <button
         class="bg-white p-5 w-fit hover:p-10 hover:cursor-pointer transition-all duration-200"
@@ -55,7 +58,7 @@
           </h2>
           <img src={event.img} alt="..." />
           <p>{event.long}</p>
-          <p>{event.link}</p>
+          <a href={event.link}>link</a>
         </Modal>
       </button>
     </div>
