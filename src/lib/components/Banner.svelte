@@ -1,19 +1,23 @@
 <script>
-  import me from "$lib/images/me3.webp"
+  import Banner from "$lib/images/Banner4.5.webp"
+  import coolLines from "$lib/videos/coollines2.mp4"
+  import snap from "$lib/images/snap2.webp"
 </script>
 
 <div
-  class="h-[40vh] flex justify-center items-end relative bg-transparent z-10"
+  class="h-[100vh] flex justify-center items-end relative bg-transparent z-10"
 >
-  <img
-    alt="me!"
-    src={me}
-    width="200"
-    height="200"
-    class="border rounded-full z-20"
-  />
+  <img alt="me!" src={Banner} class="z-20 object-cover h-full w-full" />
   <p class="absolute right-5 text-2xl text-slate-800 font-extrabold z-20">
-    JLS - Coding Noob
+    JLS
   </p>
-  <div class="bg-white h-full w-full absolute" />
+  <!-- svelte-ignore a11y-media-has-caption -->
+  <video
+    src={coolLines}
+    muted
+    poster={snap}
+    autoplay
+    loop
+    class="bg-white h-full w-full absolute object-cover"
+  />
 </div>

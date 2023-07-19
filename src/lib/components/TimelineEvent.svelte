@@ -3,7 +3,6 @@
   import { fly } from "svelte/transition"
   import type { Event } from "$lib/data/eventlist"
   import Modal from "./Modal.svelte"
-  import { P } from "flowbite-svelte"
 
   export let event: Event
   export let y: number
