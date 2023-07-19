@@ -1,6 +1,6 @@
 <script>
   import Banner from "$lib/images/Banner4.5.webp"
-  import coolLines from "$lib/videos/coollines2.mp4"
+  import coolLines from "$lib/video/coollines2.mp4"
   import snap from "$lib/images/snap2.webp"
 </script>
 
