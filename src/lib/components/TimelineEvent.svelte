@@ -2,10 +2,13 @@
   import { onMount, afterUpdate } from "svelte"
   import { fly } from "svelte/transition"
   import type { Event } from "$lib/data/eventlist"
+  import Modal from "./Modal.svelte"
+  import { P } from "flowbite-svelte"
 
   export let event: Event
   export let y: number
   export let direction: string
+  let showModal: Boolean = false
 
   let myElement: Element
   let elementTop: any
@@ -29,16 +32,32 @@
   })
 </script>
 
-<h1 bind:this={myElement}>
+<div bind:this={myElement} class="h-20">
   {#if y + viewportHeight >= elementTop}
-    <p
+    <div
       in:fly={{ x: vector, duration: 2000 }}
       out:fly={{ x: vector, duration: 2000 }}
-      class="text-5xl {direction === 'LEFT'
-        ? 'text-start pl-20'
-        : 'text-end pr-20'}"
+      class="text-5xl w-full flex {direction === 'LEFT'
+        ? 'justify-start pl-20'
+        : 'justify-end pr-20'}"
     >
-      {event.name}
-    </p>
+      <button
+        class="bg-white p-5 w-fit hover:p-10 hover:cursor-pointer transition-all duration-200"
+        on:click={() => (showModal = true)}
+      >
+        <p>
+          {event.name}
+        </p>
+
+        <Modal bind:showModal>
+          <h2 slot="header">
+            {event.name}
+          </h2>
+          <img src={event.img} alt="..." />
+          <p>{event.long}</p>
+          <p>{event.link}</p>
+        </Modal>
+      </button>
+    </div>
   {/if}
-</h1>
+</div>
