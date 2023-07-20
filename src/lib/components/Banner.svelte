@@ -1,7 +1,7 @@
 <script>
-  import Banner from "$lib/images/Banner4.5.webp"
+  import Banner from "$lib/images/Banner5.webp"
   import coolLines from "$lib/video/coollines2.mp4"
-  import snap from "$lib/images/snap2.webp"
+  import snapshot from "$lib/images/snap2.webp"
 </script>
 
 <div
@@ -15,7 +15,7 @@
   <video
     src={coolLines}
     muted
-    poster={snap}
+    poster={snapshot}
     autoplay
     loop
     class="bg-white h-full w-full absolute object-cover"

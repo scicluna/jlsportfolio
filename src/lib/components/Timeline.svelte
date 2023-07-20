@@ -14,9 +14,14 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="w-full flex flex-col gap-20 p-2 bg-blue-300 overflow-hidden">
-  <h1>{y} {height}</h1>
-  {#each events as event, index (event.id)}
-    <TimelineEvent {event} {y} direction={index % 2 === 0 ? "RIGHT" : "LEFT"} />
+<h1 class="sm:text-5xl text-3xl font-extrabold">TIMELINE</h1>
+
+<div class="w-full flex flex-col gap-40 p-2 bg-blue-300 overflow-hidden pt-20">
+  {#each events as timeEvent, index (timeEvent.id)}
+    <TimelineEvent
+      {timeEvent}
+      {y}
+      direction={index % 2 === 0 ? "RIGHT" : "LEFT"}
+    />
   {/each}
 </div>
