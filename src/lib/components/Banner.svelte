@@ -5,7 +5,7 @@
 </script>
 
 <div
-  class="h-[100vh] flex justify-center items-end relative bg-transparent z-10"
+  class="sm:h-[100dvh] h-[75dvh] flex justify-center items-end relative bg-transparent z-10"
 >
   <img alt="me!" src={Banner} class="z-20 object-cover h-full w-full" />
   <p class="absolute right-5 text-2xl text-slate-800 font-extrabold z-20">

@@ -13,15 +13,18 @@
   let myElement: Element
   let elementTop: any
   let viewportHeight: number
+  let viewportWidth: number
+  let svgBoxWidth: number
+  $: svgBoxWidth = viewportWidth * 0.75
 
   const vector = direction === "LEFT" ? -200 : 200
+  const randomPadding = Math.random() * 200
 
   const isBrowser = typeof window !== "undefined"
 
   onMount(() => {
     if (isBrowser) {
       elementTop = myElement.getBoundingClientRect().top + window.scrollY
-      viewportHeight = window.innerHeight
     }
   })
 
@@ -30,7 +33,19 @@
       elementTop = myElement.getBoundingClientRect().top + window.scrollY
     }
   })
+
+  function handleResize() {
+    viewportWidth = window.innerWidth
+    svgBoxWidth = viewportWidth * 0.75
+    console.log(viewportWidth)
+  }
 </script>
+
+<svelte:window
+  bind:innerWidth={viewportWidth}
+  bind:innerHeight={viewportHeight}
+  on:resize={handleResize}
+/>
 
 <div bind:this={myElement} class="h-20 relative z-10">
   {#if y + viewportHeight >= elementTop}
@@ -42,25 +57,29 @@
         ? 'justify-start'
         : 'justify-end'}"
       style={direction === "LEFT"
-        ? `padding-left: ${Math.random() * 10}vw;`
-        : `padding-right: ${Math.random() * 10}vw`}
+        ? `padding-left: ${randomPadding}px;`
+        : `padding-right: ${randomPadding}px`}
     >
       <svg
-        class="absolute {direction === 'LEFT'
-          ? 'left-[5%]'
-          : 'right-[5%]'} h-[240%] w-1/2 -z-10"
-        viewBox="0 0 210 290"
+        class="absolute h-[245%] -z-10"
+        viewBox="0 0 {svgBoxWidth} 290"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M 25 0 V 290"
+          d="M {direction === 'RIGHT'
+            ? `${svgBoxWidth * 0.825}`
+            : `${svgBoxWidth * 0.175}`} 0 V 290"
           fill="none"
           stroke="black"
           stroke-width="15"
           transition:draw={{ duration: 1000, easing: cubicIn, delay: 200 }}
         />
         <path
-          d="M 25 290 H {direction === 'RIGHT' ? '-600' : '600'}"
+          d="M {direction === 'RIGHT'
+            ? `${svgBoxWidth * 0.825}`
+            : `${svgBoxWidth * 0.175}`} 290 H {direction === 'RIGHT'
+            ? `${-500 - svgBoxWidth + randomPadding}`
+            : `${500 + svgBoxWidth - randomPadding}`}"
           fill="none"
           stroke="black"
           stroke-width="30"
