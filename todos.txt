@@ -1,0 +1,15 @@
+Icons for sidebar - DONE
+Sidebar Scrollto/Link to sections - DONE
+
+About Me Section looking better
+
+
+Resume Page
+Contact me Page
+
+More fussing with timeline graphics
+Actually make modal for timeline
+Actually populate modals for timeline
+
+Final fussing 
+Publish on Vercel

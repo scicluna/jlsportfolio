@@ -3,23 +3,25 @@
   import { fly } from "svelte/transition"
   import { draw } from "svelte/transition"
   import { cubicIn, cubicOut, quintOut } from "svelte/easing"
-  import type { Event } from "$lib/data/eventlist"
+  import type { Event } from "$lib/data/eventlist.js"
   import ModalCard from "./ModalCard.svelte"
 
   export let timeEvent: Event
   export let y: number
   export let direction: string
+  export let last: boolean
 
   let myElement: Element
   let elementTop: any
   let viewportHeight: number
   let viewportWidth: number
   let svgBoxWidth: number
-  $: svgBoxWidth = viewportWidth * 0.75
+  let randomPadding: number
 
   const vector = direction === "LEFT" ? -200 : 200
-  const randomPadding = Math.random() * 200
 
+  $: svgBoxWidth = viewportWidth * 0.75 - randomPadding
+  $: randomPadding = Math.random() * (viewportWidth / 8)
   const isBrowser = typeof window !== "undefined"
 
   onMount(() => {
@@ -37,7 +39,6 @@
   function handleResize() {
     viewportWidth = window.innerWidth
     svgBoxWidth = viewportWidth * 0.75
-    console.log(viewportWidth)
   }
 </script>
 
@@ -47,12 +48,12 @@
   on:resize={handleResize}
 />
 
-<div bind:this={myElement} class="h-20 relative z-10">
+<div bind:this={myElement} class="h-20 w-full relative z-10">
   {#if y + viewportHeight >= elementTop}
     <div
       in:fly={{ x: vector, duration: 1500, opacity: 1, easing: quintOut }}
       out:fly={{ x: vector, duration: 1500, opacity: 1 }}
-      class="sm:text-5xl text-xl w-full flex transition-opacity relative {direction ===
+      class="sm:text-5xl text-xl flex transition-opacity relative {direction ===
       'LEFT'
         ? 'justify-start'
         : 'justify-end'}"
@@ -62,7 +63,7 @@
     >
       <svg
         class="absolute h-[245%] -z-10"
-        viewBox="0 0 {svgBoxWidth} 290"
+        viewBox="0 0 {last ? '0' : svgBoxWidth} {last ? '0' : 290}"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -70,7 +71,7 @@
             ? `${svgBoxWidth * 0.825}`
             : `${svgBoxWidth * 0.175}`} 0 V 290"
           fill="none"
-          stroke="black"
+          stroke="#cc00cc"
           stroke-width="15"
           transition:draw={{ duration: 1000, easing: cubicIn, delay: 200 }}
         />
@@ -78,10 +79,10 @@
           d="M {direction === 'RIGHT'
             ? `${svgBoxWidth * 0.825}`
             : `${svgBoxWidth * 0.175}`} 290 H {direction === 'RIGHT'
-            ? `${-500 - svgBoxWidth + randomPadding}`
-            : `${500 + svgBoxWidth - randomPadding}`}"
+            ? `${-svgBoxWidth + randomPadding}`
+            : `${svgBoxWidth - randomPadding}`}"
           fill="none"
-          stroke="black"
+          stroke="#cc00cc"
           stroke-width="30"
           transition:draw={{ duration: 1000, easing: cubicOut, delay: 1200 }}
         />

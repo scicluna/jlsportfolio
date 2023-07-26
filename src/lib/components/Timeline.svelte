@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte"
   import TimelineEvent from "./TimelineEvent.svelte"
-  import type { Event } from "$lib/data/eventlist"
+  import type { Event } from "$lib/data/eventlist.js"
 
   export let events: Event[]
   let y: number
@@ -14,14 +14,19 @@
 
 <svelte:window bind:scrollY={y} />
 
-<h1 class="sm:text-5xl text-3xl font-extrabold">TIMELINE</h1>
-
-<div class="w-full flex flex-col gap-40 p-2 bg-blue-300 overflow-hidden pt-20">
-  {#each events as timeEvent, index (timeEvent.id)}
-    <TimelineEvent
-      {timeEvent}
-      {y}
-      direction={index % 2 === 0 ? "RIGHT" : "LEFT"}
-    />
-  {/each}
+<div
+  class="w-full flex flex-col gap-10 p-4 bg-blue-950 text-slate-200 overflow-hidden pb-40"
+  id="timeline"
+>
+  <h1 class="sm:text-5xl text-3xl font-extrabold h-full">TIMELINE</h1>
+  <div class="flex flex-col gap-40 text-black">
+    {#each events as timeEvent, index (timeEvent.id)}
+      <TimelineEvent
+        {timeEvent}
+        {y}
+        direction={index % 2 === 0 ? "RIGHT" : "LEFT"}
+        last={index === events.length - 1}
+      />
+    {/each}
+  </div>
 </div>

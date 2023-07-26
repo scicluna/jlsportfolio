@@ -1,12 +1,12 @@
 <script lang="ts">
-  import type { Event } from "$lib/data/eventlist"
+  import type { Event } from "$lib/data/eventlist.js"
   import Modal from "./Modal.svelte"
   export let timeEvent: Event
   export let showModal: Boolean = false
 </script>
 
 <button
-  class="bg-white p-10 w-fit h-full hover:scale-105 hover:cursor-pointer transition-all duration-200"
+  class="bg-slate-200 p-10 w-fit h-full hover:scale-105 hover:cursor-pointer transition-all duration-200"
   on:click={() => (showModal = true)}
 >
   <p>
