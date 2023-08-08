@@ -1,13 +1,15 @@
 Icons for sidebar - DONE
 Sidebar Scrollto/Link to sections - DONE
 
-About Me Section looking better
+About Me Section looking better - MEH
 
+Projects Page 
+BUTTON ON BANNER SAYING VIEW MY PROJECTS OR SOMETHING LIKE THAT
 
 Resume Page
 Contact me Page
 
-More fussing with timeline graphics
+More fussing with timeline graphics - DONE
 Actually make modal for timeline
 Actually populate modals for timeline
 

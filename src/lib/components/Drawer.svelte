@@ -20,16 +20,23 @@
     duration: 200,
     easing: sineIn,
   }
-  function smoothScroll(event: Event) {
-    event.preventDefault()
-    const link = event.currentTarget as HTMLAnchorElement
-    const anchorId = new URL(link?.href).hash.replace("#", "")
-    const anchor = document.getElementById(anchorId)
-    window.scrollTo({
-      top: anchor!.offsetTop,
-      behavior: "smooth",
-    })
-  }
+  // function smoothScroll(event: Event) {
+  //   event.preventDefault()
+  //   const currRoute = window.location.href.split("/")[3] || ""
+  //   if (currRoute != "") {
+  //     window.location.href = "/"
+  //   }
+  //   console.log(currRoute)
+  //   const link = event.currentTarget as HTMLAnchorElement
+  //   if (currRoute == "") {
+  //     const anchorId = new URL(link?.href).hash.replace("#", "")
+  //     const anchor = document.getElementById(anchorId)
+  //     window.scrollTo({
+  //       top: anchor!.offsetTop,
+  //       behavior: "smooth",
+  //     })
+  //   }
+  // }
 </script>
 
 <div class="text-center">
@@ -59,7 +66,7 @@
   >
 </div>
 <Drawer
-  class="bg-slate-300"
+  class="bg-purple-100"
   transitionType="fly"
   {transitionParams}
   bind:hidden={hidden2}
@@ -68,7 +75,7 @@
   <div class="flex items-center">
     <h5
       id="drawer-navigation-label-3"
-      class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400"
+      class="text-base font-bold text-purple-900 uppercase dark:text-purple-200"
     >
       Take a look around!
     </h5>
@@ -79,18 +86,38 @@
   </div>
   <Sidebar>
     <SidebarWrapper
-      divClass="overflow-y-auto py-4 px-3 rounded dark:bg-slate-800"
+      divClass="overflow-y-auto py-4 px-3 rounded dark:bg-purple-800"
     >
       <SidebarGroup>
         <SidebarItem
+          label="Home"
+          class="hover:text-purple-800 dark:hover:text-purple-300 text-purple-950 font-extrabold dark:text-purple-200 hover:bg-transparent"
+          href="/"
+        >
+          <svelte:fragment slot="icon">
+            <svg
+              class="w-6 h-6 text-purple-950 dark:text-purple-200"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 14 18"
+            >
+              <path
+                d="M7 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm2 1H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"
+              />
+            </svg>
+          </svelte:fragment>
+        </SidebarItem>
+
+        <!-- <SidebarItem
           label="About"
-          class="hover:bg-slate-100"
+          class="hover:text-purple-800 dark:hover:text-purple-300 text-purple-950 font-extrabold dark:text-purple-200 hover:bg-transparent"
           href="#about"
           on:click={smoothScroll}
         >
           <svelte:fragment slot="icon">
             <svg
-              class="w-6 h-6 text-gray-800 dark:text-white"
+              class="w-6 h-6 text-purple-950 dark:text-purple-200"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -104,13 +131,13 @@
         </SidebarItem>
         <SidebarItem
           label="My Journey"
-          class="hover:bg-slate-100"
+          class="hover:text-purple-800 dark:hover:text-purple-300 text-purple-950 font-extrabold dark:text-purple-200 hover:bg-transparent"
           href="#timeline"
           on:click={smoothScroll}
         >
           <svelte:fragment slot="icon">
             <svg
-              class="w-6 h-6 text-gray-800 dark:text-white"
+              class="w-6 h-6 text-purple-950 dark:text-purple-200 font-extrabold"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -121,16 +148,16 @@
               />
             </svg>
           </svelte:fragment>
-        </SidebarItem>
+        </SidebarItem> -->
         <SidebarItem
           label="Resume"
           {spanClass}
-          class="hover:bg-slate-100"
+          class="hover:text-purple-800 dark:hover:text-purple-300 text-purple-950 font-extrabold dark:text-purple-200 hover:bg-transparent"
           href="/resume"
         >
           <svelte:fragment slot="icon">
             <svg
-              class="w-6 h-6 text-gray-800 dark:text-white"
+              class="w-6 h-6 text-purple-950 dark:text-purple-200 font-extrabold"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -149,12 +176,12 @@
         <SidebarItem
           label="Contact"
           {spanClass}
-          class="hover:bg-slate-100"
+          class="hover:text-purple-800 dark:hover:text-purple-300 text-purple-950 font-extrabold dark:text-purple-200 hover:bg-transparent"
           href="/contact"
         >
           <svelte:fragment slot="icon">
             <svg
-              class="w-6 h-6 text-gray-800 dark:text-white"
+              class="w-6 h-6 text-purple-950 dark:text-purple-200 font-extrabold"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -166,6 +193,27 @@
               <path
                 d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
               />
+            </svg>
+          </svelte:fragment>
+        </SidebarItem>
+        <SidebarItem
+          label="Projects"
+          {spanClass}
+          class="hover:text-purple-800 dark:hover:text-purple-300 text-purple-950 font-extrabold dark:text-purple-200 hover:bg-transparent"
+          href="/projects"
+        >
+          <svelte:fragment slot="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              ><g transform="rotate(90 12 12)"
+                ><path
+                  fill="currentColor"
+                  d="m22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9c-2-2-5-2.4-7.4-1.3L9 6L6 9L1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4Z"
+                /></g
+              >
             </svg>
           </svelte:fragment>
         </SidebarItem>
