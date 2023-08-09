@@ -1,5 +1,5 @@
 <script>
-  import Banner from "$lib/images/Banner5.webp"
+  import Banner from "$lib/images/Banner5.5.webp"
   import coolLines from "$lib/video/coollines2.mp4"
   import snapshot from "$lib/images/snap2.webp"
 </script>
@@ -8,7 +8,7 @@
   class="sm:h-[100dvh] h-[75dvh] flex justify-center items-end relative bg-transparent z-10"
 >
   <a
-    class="absolute top-2 right-2 flex justify-center items-center text-white shadow-black shadow-md hover:shadow-lg font-bold text-xl bg-purple-600 hover:bg-purple-800 hover:scale-105 rounded-full z-30 h-20 w-56"
+    class="absolute bottom-10 right-5 flex justify-center items-center text-white shadow-black shadow-md hover:shadow-lg font-bold text-xl bg-purple-600 hover:bg-purple-800 hover:scale-105 rounded-full z-30 h-20 w-56"
     href="/projects"
   >
     See my Projects!

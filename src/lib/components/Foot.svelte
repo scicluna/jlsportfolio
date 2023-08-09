@@ -17,11 +17,11 @@
   class="flex flex-col gap-2 items-center h-36 min-h-[20%] relative bg-indigo-950 text-slate-200 text-sm"
 >
   <div
-    class="border-t border-gray-700 h-24 flex md:flex-row flex-col text-xs justify-around items-center w-full p-5"
+    class="border-t border-gray-700 h-24 flex sm:flex-row flex-col text-xs sm:justify-around items-center w-full p-5"
   >
-    <p class="text-xl whitespace-nowrap">JLS 2023.All rights reserved.</p>
+    <p class="text-xl whitespace-nowrap">JLS 2023. All rights reserved.</p>
     <div class="flex flex-col md:gap-0 gap-4 justify-center items-center">
-      <div class="flex gap-1 w-1/5">
+      <div class="flex gap-1 w-1/5 justify-center">
         <div class="md:w-16 md:h-16 h-12 w-12 flex items-center">
           <a href={"https://github.com/scicluna/"} target="_blank">
             <Icon data={github} scale={3} />

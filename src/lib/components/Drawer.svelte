@@ -79,6 +79,7 @@
     >
       <SidebarGroup>
         <SidebarItem
+          on:click={() => (hidden2 = true)}
           label="Home"
           class="hover:text-purple-800  {currentPage == ''
             ? 'text-purple-800 dark:hover:text-purple-200'
@@ -100,6 +101,7 @@
           </svelte:fragment>
         </SidebarItem>
         <SidebarItem
+          on:click={() => (hidden2 = true)}
           label="Resume"
           {spanClass}
           class="hover:text-purple-800  {currentPage == 'resume'
@@ -126,6 +128,7 @@
           </svelte:fragment>
         </SidebarItem>
         <SidebarItem
+          on:click={() => (hidden2 = true)}
           label="Contact"
           {spanClass}
           class="hover:text-purple-800  {currentPage == 'contact'
@@ -151,6 +154,7 @@
           </svelte:fragment>
         </SidebarItem>
         <SidebarItem
+          on:click={() => (hidden2 = true)}
           label="Projects"
           {spanClass}
           class="hover:text-purple-800  {currentPage == 'projects'

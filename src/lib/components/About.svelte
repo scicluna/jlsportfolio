@@ -1,6 +1,6 @@
 <div class="text-justify w-full p-4 bg-indigo-950 text-slate-200" id="about">
   <h1 class="font-extralight text-5xl">Who am I?</h1>
-  <p class="text-2xl font-bold sm:leading-loose">
+  <p class="sm:text-2xl font-bold sm:leading-loose">
     With a solid foundation in web development from my bootcamp training, I'm
     eager to apply my skills in a practical environment. I consider myself a
     visionary - always looking for innovative solutions and constantly driven by

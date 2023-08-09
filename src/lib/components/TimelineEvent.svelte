@@ -63,7 +63,7 @@
     >
       <svg
         class="absolute h-[245%] -z-10"
-        viewBox="0 0 {last ? '0' : svgBoxWidth} {last ? '0' : 290}"
+        viewBox="0 0 {last ? '0' : svgBoxWidth - 20} {last ? '0' : 290}"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -71,7 +71,7 @@
             ? `${svgBoxWidth * 0.825}`
             : `${svgBoxWidth * 0.175}`} 0 V 290"
           fill="none"
-          stroke="#cc00cc"
+          stroke="rgb(44, 169, 188)"
           stroke-width="15"
           transition:draw={{ duration: 1000, easing: cubicIn, delay: 200 }}
         />
@@ -82,7 +82,7 @@
             ? `${-svgBoxWidth + randomPadding}`
             : `${svgBoxWidth - randomPadding}`}"
           fill="none"
-          stroke="#cc00cc"
+          stroke="rgb(44, 169, 188)"
           stroke-width="30"
           transition:draw={{ duration: 1000, easing: cubicOut, delay: 1200 }}
         />

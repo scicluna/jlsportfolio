@@ -7,6 +7,14 @@
   export let data: PageData
 </script>
 
+<svelte:head>
+  <title>John Lucas Scicluna Portfolio</title>
+  <meta
+    name="An aspiring software engineer - John Lucas Scicluna"
+    content="John Lucas Scicluna"
+  />
+</svelte:head>
+
 <main>
   <!-- banner -->
   <Banner />
@@ -15,6 +23,3 @@
   <!-- timeline -->
   <Timeline events={data.events} />
 </main>
-
-<!-- throaway footer w/ links -->
-<!-- seperate resume/contact form pages -->
