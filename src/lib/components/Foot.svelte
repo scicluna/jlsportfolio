@@ -14,7 +14,7 @@
 </script>
 
 <footer
-  class="flex flex-col gap-2 items-center h-36 min-h-[20%] relative bg-slate-800 text-slate-100 text-sm"
+  class="flex flex-col gap-2 items-center h-36 min-h-[20%] relative bg-indigo-950 text-slate-200 text-sm"
 >
   <div
     class="border-t border-gray-700 h-24 flex md:flex-row flex-col text-xs justify-around items-center w-full p-5"
@@ -23,17 +23,20 @@
     <div class="flex flex-col md:gap-0 gap-4 justify-center items-center">
       <div class="flex gap-1 w-1/5">
         <div class="md:w-16 md:h-16 h-12 w-12 flex items-center">
-          <a href={"https://github.com/scicluna/"}>
+          <a href={"https://github.com/scicluna/"} target="_blank">
             <Icon data={github} scale={3} />
           </a>
         </div>
         <div class="md:w-16 md:h-16 h-12 w-12 flex items-center">
-          <a href={"https://www.linkedin.com/in/john-scicluna-472291bb/"}>
+          <a
+            href={"https://www.linkedin.com/in/john-scicluna-472291bb/"}
+            target="_blank"
+          >
             <Icon data={linkedinSquare} scale={3} />
           </a>
         </div>
         <div class="md:w-16 md:h-16 h-12 w-12 flex items-center">
-          <a href={"mailto:sciclunajl@gmail.com"}>
+          <a href={"mailto:sciclunajl@gmail.com"} target="_blank">
             <Icon data={envelopeO} scale={3} />
           </a>
         </div>

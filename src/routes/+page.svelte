@@ -7,7 +7,7 @@
   export let data: PageData
 </script>
 
-<main class="bg-slate-300">
+<main>
   <!-- banner -->
   <Banner />
   <!-- about me -->
