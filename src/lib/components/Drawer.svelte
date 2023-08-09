@@ -13,6 +13,7 @@
     SidebarWrapper,
   } from "flowbite-svelte"
   import { sineIn } from "svelte/easing"
+  import { afterNavigate } from "$app/navigation"
   let hidden2 = true
   let spanClass = "flex-1 ml-3 whitespace-nowrap"
   let transitionParams = {
@@ -20,23 +21,11 @@
     duration: 200,
     easing: sineIn,
   }
-  // function smoothScroll(event: Event) {
-  //   event.preventDefault()
-  //   const currRoute = window.location.href.split("/")[3] || ""
-  //   if (currRoute != "") {
-  //     window.location.href = "/"
-  //   }
-  //   console.log(currRoute)
-  //   const link = event.currentTarget as HTMLAnchorElement
-  //   if (currRoute == "") {
-  //     const anchorId = new URL(link?.href).hash.replace("#", "")
-  //     const anchor = document.getElementById(anchorId)
-  //     window.scrollTo({
-  //       top: anchor!.offsetTop,
-  //       behavior: "smooth",
-  //     })
-  //   }
-  // }
+  let currentPage = ""
+
+  afterNavigate(() => {
+    currentPage = window?.location?.href.split("/")[3] || ""
+  })
 </script>
 
 <div class="text-center">
@@ -91,7 +80,9 @@
       <SidebarGroup>
         <SidebarItem
           label="Home"
-          class="hover:text-purple-800 dark:hover:text-purple-300 text-purple-950 font-extrabold dark:text-purple-200 hover:bg-transparent"
+          class="hover:text-purple-800  {currentPage == ''
+            ? 'text-purple-800 dark:hover:text-purple-200'
+            : 'text-purple-950 dark:text-purple-300'} font-extrabold dark:text-purple-300 hover:bg-transparent"
           href="/"
         >
           <svelte:fragment slot="icon">
@@ -108,51 +99,12 @@
             </svg>
           </svelte:fragment>
         </SidebarItem>
-
-        <!-- <SidebarItem
-          label="About"
-          class="hover:text-purple-800 dark:hover:text-purple-300 text-purple-950 font-extrabold dark:text-purple-200 hover:bg-transparent"
-          href="#about"
-          on:click={smoothScroll}
-        >
-          <svelte:fragment slot="icon">
-            <svg
-              class="w-6 h-6 text-purple-950 dark:text-purple-200"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 14 18"
-            >
-              <path
-                d="M7 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm2 1H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"
-              />
-            </svg>
-          </svelte:fragment>
-        </SidebarItem>
-        <SidebarItem
-          label="My Journey"
-          class="hover:text-purple-800 dark:hover:text-purple-300 text-purple-950 font-extrabold dark:text-purple-200 hover:bg-transparent"
-          href="#timeline"
-          on:click={smoothScroll}
-        >
-          <svelte:fragment slot="icon">
-            <svg
-              class="w-6 h-6 text-purple-950 dark:text-purple-200 font-extrabold"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 16 22"
-            >
-              <path
-                d="M15.458 4a3 3 0 1 0-4.478 2.6A2.6 2.6 0 0 1 8.4 9H6.6a4.57 4.57 0 0 0-2.6.814v-3a3 3 0 1 0-2 0v8.368a3 3 0 1 0 2 0V13.6A2.607 2.607 0 0 1 6.6 11h1.8a4.6 4.6 0 0 0 4.548-4.049A3 3 0 0 0 15.458 4Z"
-              />
-            </svg>
-          </svelte:fragment>
-        </SidebarItem> -->
         <SidebarItem
           label="Resume"
           {spanClass}
-          class="hover:text-purple-800 dark:hover:text-purple-300 text-purple-950 font-extrabold dark:text-purple-200 hover:bg-transparent"
+          class="hover:text-purple-800  {currentPage == 'resume'
+            ? 'text-purple-800 dark:hover:text-purple-200'
+            : 'text-purple-950 dark:text-purple-300'} font-extrabold dark:text-purple-300 hover:bg-transparent"
           href="/resume"
         >
           <svelte:fragment slot="icon">
@@ -176,7 +128,9 @@
         <SidebarItem
           label="Contact"
           {spanClass}
-          class="hover:text-purple-800 dark:hover:text-purple-300 text-purple-950 font-extrabold dark:text-purple-200 hover:bg-transparent"
+          class="hover:text-purple-800  {currentPage == 'contact'
+            ? 'text-purple-800 dark:hover:text-purple-200'
+            : 'text-purple-950 dark:text-purple-300'} font-extrabold dark:text-purple-300 hover:bg-transparent"
           href="/contact"
         >
           <svelte:fragment slot="icon">
@@ -199,7 +153,9 @@
         <SidebarItem
           label="Projects"
           {spanClass}
-          class="hover:text-purple-800 dark:hover:text-purple-300 text-purple-950 font-extrabold dark:text-purple-200 hover:bg-transparent"
+          class="hover:text-purple-800  {currentPage == 'projects'
+            ? 'text-purple-800 dark:hover:text-purple-200'
+            : 'text-purple-950 dark:text-purple-300'} font-extrabold dark:text-purple-300 hover:bg-transparent"
           href="/projects"
         >
           <svelte:fragment slot="icon">

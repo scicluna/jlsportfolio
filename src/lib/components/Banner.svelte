@@ -8,7 +8,7 @@
   class="sm:h-[100dvh] h-[75dvh] flex justify-center items-end relative bg-transparent z-10"
 >
   <a
-    class="absolute top-1/3 left-1/3 -translate-y-1/2 flex justify-center items-center text-white shadow-black shadow-md hover:shadow-lg font-bold text-xl bg-purple-600 hover:bg-purple-800 hover:scale-105 rounded-full z-30 h-20 w-56"
+    class="absolute top-2 right-2 flex justify-center items-center text-white shadow-black shadow-md hover:shadow-lg font-bold text-xl bg-purple-600 hover:bg-purple-800 hover:scale-105 rounded-full z-30 h-20 w-56"
     href="/projects"
   >
     See my Projects!

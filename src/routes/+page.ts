@@ -1,5 +1,5 @@
-import { eventlist } from '$lib/data/eventlist'
-import type { PageLoad } from './$types'
+import { eventlist } from '$lib/data/eventlist.js'
+import type { PageLoad } from './$types.js'
 
 export const load = (() => {
     return {
