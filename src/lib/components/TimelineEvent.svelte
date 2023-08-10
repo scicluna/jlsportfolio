@@ -80,7 +80,7 @@
             ? `${svgBoxWidth * 0.825}`
             : `${svgBoxWidth * 0.175}`} 290 H {direction === 'RIGHT'
             ? `${-svgBoxWidth + randomPadding}`
-            : `${svgBoxWidth - randomPadding}`}"
+            : `${svgBoxWidth - randomPadding + 100}`}"
           fill="none"
           stroke="rgb(44, 169, 188)"
           stroke-width="30"

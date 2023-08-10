@@ -1,5 +1,4 @@
 <script lang="ts">
-  import closeSymbol from "$lib/icons/x-symbol-svgrepo-com.svg"
   export let showModal: Boolean // boolean
 
   let dialog: HTMLDialogElement // HTMLDialogElement
@@ -12,10 +11,11 @@
   bind:this={dialog}
   on:close={() => (showModal = false)}
   on:click|self={() => dialog.close()}
+  class="sm:w-1/3 w-[95%]"
 >
   <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div on:click|stopPropagation class="relative">
-    <button on:click={() => dialog.close()} class="absolute top-1 right-1">
+  <div on:click|stopPropagation class="relative h-1/2">
+    <button on:click={() => dialog.close()} class="absolute top-4 right-4">
       <svg
         fill="#000000"
         height="20px"
@@ -41,6 +41,7 @@
     <hr />
     <slot />
     <hr />
+    <slot name="footer" />
   </div>
 </dialog>
 
