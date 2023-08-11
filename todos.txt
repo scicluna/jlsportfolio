@@ -6,12 +6,13 @@ About Me Section looking better - MEH
 Projects Page 
 BUTTON ON BANNER SAYING VIEW MY PROJECTS OR SOMETHING LIKE THAT
 
-Resume Page
-Contact me Page
+Resume Page - DONE
+Contact me Page - DONE
 
 More fussing with timeline graphics - DONE
-Actually make modal for timeline
-Actually populate modals for timeline
+Actually make modal for timeline - DONE
+Actually populate modals for timeline - DONE
+Retake some of the worse pictures for timeline
 
 Final fussing 
 Publish on Vercel

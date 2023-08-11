@@ -6,10 +6,10 @@
 </script>
 
 <button
-  class="bg-slate-200 p-10 h-full min-w-[25dvw] hover:scale-105 hover:cursor-pointer transition-all duration-200"
+  class="bg-slate-200 p-10 h-full min-w-[25dvw] hover:scale-105 hover:cursor-pointer transition-all duration-150 rounded-lg shadow-indigo-950 shadow-md"
   on:click={() => (showModal = true)}
 >
-  <p>
+  <p class="font-bold">
     {timeEvent.name}
   </p>
 </button>
@@ -18,20 +18,24 @@
   <h2 slot="header" class="text-2xl font-extrabold">
     {timeEvent.name}
   </h2>
-  <div class="flex gap-2 flex-col sm:flex-row">
-    <img
-      src={timeEvent.img}
-      alt="..."
-      class="object-contain object-center h-36 w-32"
-    />
-    <div>
+  <div class="flex gap-2 flex-col h-full">
+    <div class="flex w-full justify-center">
+      <img
+        src={timeEvent.img}
+        alt="..."
+        class="object-contain object-center h-72 w-96"
+      />
+    </div>
+    <div class="flex">
       <p class="text-base">{timeEvent.short}</p>
     </div>
   </div>
   <div slot="footer" class="flex justify-around">
     {#if timeEvent.link}
       <a class="text-base text-blue-500" href={timeEvent.link} target="_blank"
-        >{timeEvent.link.includes("github") ? "github" : "link"}</a
+        >{timeEvent.link.includes("github")
+          ? "github"
+          : timeEvent.link.split(".")[1]}</a
       >
     {/if}
     {#if timeEvent.deploy}
