@@ -8,7 +8,7 @@
     I'm available any time!
   </a>
   <form
-    class="flex flex-col border sm:w-1/2 w-full h-full border-indigo-200 p-5 rounded-lg bg-indigo-800 dark:bg-indigo-950 gap-4 text-indigo-300 dark:text-indigo-400"
+    class="flex flex-col justify-center border sm:w-1/2 w-full h-full border-indigo-200 p-5 rounded-lg bg-indigo-800 dark:bg-indigo-950 gap-4 text-indigo-300 dark:text-indigo-400"
     action="https://formsubmit.co/sciclunajl@gmail.com"
     method="POST"
   >
@@ -44,7 +44,7 @@
         id="message"
         rows="5"
         required
-        class="p-1 shadow-sm shadow-indigo-950 righteous resize-none text-indigo-950 h-60"
+        class="p-1 shadow-sm shadow-indigo-950 righteous resize-none text-indigo-950 h-80"
       />
     </div>
     <button

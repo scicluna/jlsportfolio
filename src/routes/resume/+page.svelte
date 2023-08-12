@@ -1,5 +1,6 @@
 <script lang="ts">
-  export let data: { resume: string }
+  import type { PageData } from "./$types.js"
+  export let data: PageData
 </script>
 
 <main class="h-[100dvh] bg-indigo-700 dark:bg-indigo-900 relative">
