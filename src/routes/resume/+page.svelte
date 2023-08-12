@@ -11,7 +11,7 @@
   >
     Check it out~!
   </a>
-  <section class="flex h-full w-full justify-center items-center p-10">
+  <section class="flex h-full w-full justify-center items-center p-5 sm:p-10">
     <!-- svelte-ignore a11y-missing-attribute -->
     <object
       data={data.resume}

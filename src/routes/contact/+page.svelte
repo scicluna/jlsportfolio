@@ -1,5 +1,5 @@
 <main
-  class="h-[100dvh] bg-indigo-700 dark:bg-indigo-900 relative flex flex-col justify-center items-center p-10"
+  class="h-[100dvh] bg-indigo-700 dark:bg-indigo-900 relative flex flex-col justify-center items-center p-5 sm:p-10"
 >
   <a
     class="absolute top-40 left-40 text-2xl text-white font-extrabold hover:scale-110 cursor-pointer sm:flex hidden"
