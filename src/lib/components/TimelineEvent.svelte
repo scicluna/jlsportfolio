@@ -15,13 +15,11 @@
   let elementTop: any
   let viewportHeight: number
   let viewportWidth: number
-  let svgBoxWidth: number
   let randomPadding: number
 
   const vector = direction === "LEFT" ? -200 : 200
 
-  $: svgBoxWidth = viewportWidth * 0.75 - randomPadding
-  $: randomPadding = Math.random() * (viewportWidth / 8)
+  $: randomPadding = 10 + Math.random() * 10
   const isBrowser = typeof window !== "undefined"
 
   onMount(() => {
@@ -38,7 +36,7 @@
 
   function handleResize() {
     viewportWidth = window.innerWidth
-    svgBoxWidth = viewportWidth * 0.75
+    viewportHeight = window.innerHeight
   }
 </script>
 
@@ -48,45 +46,26 @@
   on:resize={handleResize}
 />
 
-<div bind:this={myElement} class="h-20 w-full relative z-10">
+<div bind:this={myElement} class="w-full h-[10dvh] relative z-10">
   {#if y + viewportHeight >= elementTop}
     <div
       in:fly={{ x: vector, duration: 1500, opacity: 1, easing: quintOut }}
       out:fly={{ x: vector, duration: 1500, opacity: 1 }}
-      class="sm:text-5xl text-xl flex transition-opacity relative {direction ===
+      class="md:text-5xl sm:text-3xl text-xl h-full text-center items-center flex transition-opacity relative {direction ===
       'LEFT'
         ? 'justify-start'
         : 'justify-end'}"
       style={direction === "LEFT"
-        ? `padding-left: ${randomPadding}px;`
-        : `padding-right: ${randomPadding}px`}
+        ? `padding-left: ${randomPadding}dvw;`
+        : `padding-right: ${randomPadding}dvw`}
     >
       <svg
-        class="absolute h-[245%] -z-10"
-        viewBox="0 0 {last ? '0' : svgBoxWidth - 20} {last ? '0' : 290}"
+        class="absolute -z-10 top-0"
+        width="{100 - randomPadding - 25}dvw"
+        height="40dvh"
         xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M {direction === 'RIGHT'
-            ? `${svgBoxWidth * 0.825}`
-            : `${svgBoxWidth * 0.175}`} 0 V 290"
-          fill="none"
-          stroke="rgb(44, 169, 188)"
-          stroke-width="15"
-          transition:draw={{ duration: 1000, easing: cubicIn, delay: 200 }}
-        />
-        <path
-          d="M {direction === 'RIGHT'
-            ? `${svgBoxWidth * 0.825}`
-            : `${svgBoxWidth * 0.175}`} 290 H {direction === 'RIGHT'
-            ? `${-svgBoxWidth + randomPadding}`
-            : `${svgBoxWidth - randomPadding + 100}`}"
-          fill="none"
-          stroke="rgb(44, 169, 188)"
-          stroke-width="30"
-          transition:draw={{ duration: 1000, easing: cubicOut, delay: 1200 }}
-        />
-      </svg>
+      />
+
       <ModalCard {timeEvent} />
     </div>
   {/if}

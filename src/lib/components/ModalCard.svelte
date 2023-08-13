@@ -6,7 +6,7 @@
 </script>
 
 <button
-  class="bg-slate-200 p-10 h-full min-w-[25dvw] hover:scale-105 hover:cursor-pointer transition-all duration-150 rounded-lg shadow-indigo-950 shadow-md"
+  class="bg-slate-200 sm:p-10 p-5 h-full min-w-[20dvw] w-fit flex items-center justify-center hover:scale-105 hover:cursor-pointer transition-all duration-150 rounded-lg shadow-indigo-950 shadow-md"
   on:click={() => (showModal = true)}
 >
   <p class="font-bold">
