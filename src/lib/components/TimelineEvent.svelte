@@ -19,7 +19,7 @@
 
   const vector = direction === "LEFT" ? -200 : 200
 
-  $: randomPadding = 10 + Math.random() * 10
+  $: randomPadding = 20 + Math.random() * 10
   const isBrowser = typeof window !== "undefined"
 
   onMount(() => {
@@ -59,14 +59,7 @@
         ? `padding-left: ${randomPadding}dvw;`
         : `padding-right: ${randomPadding}dvw`}
     >
-      <svg
-        class="absolute -z-10 top-0"
-        width="{100 - randomPadding - 25}dvw"
-        height="40dvh"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-
-      <ModalCard {timeEvent} />
+      <ModalCard {timeEvent} {direction} />
     </div>
   {/if}
 </div>
