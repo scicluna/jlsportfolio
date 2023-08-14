@@ -45,9 +45,8 @@
     /></svg
   >
 </button>
-
 <Modal bind:showModal>
-  <h2 slot="header" class="text-2xl font-extrabold">
+  <h2 slot="header" class="text-2xl font-bold">
     {timeEvent.name}
   </h2>
   <div class="flex gap-2 flex-col h-full">
