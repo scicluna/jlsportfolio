@@ -2,13 +2,13 @@
   class="h-[100dvh] bg-indigo-700 dark:bg-indigo-900 relative flex flex-col justify-center items-center p-5 sm:p-10"
 >
   <a
-    class="absolute top-40 left-40 text-2xl text-white font-extrabold hover:scale-110 cursor-pointer sm:flex hidden"
+    class="absolute top-1/2 md:left-[5%] left-0.5 text-2xl text-white font-extrabold hover:scale-110 cursor-pointer sm:flex hidden w-1/4"
     href={"mailto:sciclunajl@gmail.com"}
   >
     I'm available any time!
   </a>
   <form
-    class="flex flex-col justify-center border sm:w-1/2 w-full h-full border-indigo-200 p-5 rounded-lg bg-indigo-800 dark:bg-indigo-950 gap-4 text-indigo-300 dark:text-indigo-400"
+    class="flex flex-col justify-center border sm:w-1/2 w-full h-fit border-indigo-200 p-5 rounded-lg bg-indigo-800 dark:bg-indigo-950 gap-4 text-indigo-300 dark:text-indigo-400"
     action="https://formsubmit.co/sciclunajl@gmail.com"
     method="POST"
   >
@@ -24,7 +24,7 @@
         type="text"
         id="name"
         required
-        class="p-1 shadow-sm shadow-indigo-950 righteous text-indigo-950"
+        class="p-1 shadow-sm shadow-indigo-950 righteous text-indigo-950 h-8"
       />
     </div>
     <div class="flex flex-col">
@@ -34,7 +34,7 @@
         type="email"
         id="email"
         required
-        class="p-1 shadow-sm shadow-indigo-950 righteous text-indigo-950"
+        class="p-1 shadow-sm shadow-indigo-950 righteous text-indigo-950 h-8"
       />
     </div>
     <div class="flex flex-col">
@@ -44,7 +44,7 @@
         id="message"
         rows="5"
         required
-        class="p-1 shadow-sm shadow-indigo-950 righteous resize-none text-indigo-950 h-80"
+        class="p-1 shadow-sm shadow-indigo-950 righteous resize-none text-indigo-950 sm:h-52 md:h-80"
       />
     </div>
     <button

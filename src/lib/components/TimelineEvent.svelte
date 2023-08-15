@@ -19,7 +19,7 @@
 
   const vector = direction === "LEFT" ? -200 : 200
 
-  $: randomPadding = 20 + Math.random() * 10
+  $: randomPadding = 20 + Math.random() * 8
   const isBrowser = typeof window !== "undefined"
 
   onMount(() => {
@@ -59,7 +59,7 @@
         ? `padding-left: ${randomPadding}dvw;`
         : `padding-right: ${randomPadding}dvw`}
     >
-      <ModalCard {timeEvent} {direction} />
+      <ModalCard {timeEvent} {direction} {last} />
     </div>
   {/if}
 </div>

@@ -6,10 +6,11 @@
   export let timeEvent: Event
   export let showModal: Boolean = false
   export let direction: string
+  export let last: boolean
 </script>
 
 <button
-  class="relative bg-slate-200 sm:p-10 p-5 h-full min-w-[20dvw] w-fit flex items-center justify-center hover:scale-105 hover:cursor-pointer transition-all duration-150 rounded-lg shadow-indigo-950 shadow-md"
+  class="relative bg-purple-100 hover:bg-purple-300 sm:p-10 p-5 h-full min-w-[20dvw] w-fit flex items-center justify-center hover:cursor-pointer transition-all duration-150 rounded-lg shadow-indigo-950 shadow-md"
   on:click={() => (showModal = true)}
 >
   <p class="font-bold">
@@ -27,26 +28,33 @@
       ? 'right-1/2'
       : 'left-1/2'} -z-20 pointer-events-none"
     ><path
-      d="M0,-150v300"
+      d={last ? "" : "M0,-150v300"}
       transform={direction === "RIGHT"
         ? "translate(500 150)"
         : "translate(0 150)"}
       fill="none"
-      stroke="#3f5787"
+      stroke="rgb(44, 169, 188)"
       stroke-width="15"
       transition:draw={{ duration: 1000, easing: cubicIn, delay: 200 }}
     /><path
-      d={direction === "RIGHT" ? "M250,0h-500" : "M-250,0h500"}
+      d={last ? "" : direction === "RIGHT" ? "M250,0h-500" : "M-250,0h500"}
       transform="translate(250 300)"
       fill="none"
-      stroke="#3f5787"
+      stroke="rgb(44, 169, 188)"
       stroke-width="15"
       transition:draw={{ duration: 1000, easing: cubicOut, delay: 1200 }}
     /></svg
   >
+  <div
+    class="absolute right-0 w-screen h-full -z-50 bg-blue-950 {direction ===
+    'RIGHT'
+      ? 'translate-x-full'
+      : ''}"
+  />
 </button>
+
 <Modal bind:showModal>
-  <h2 slot="header" class="text-2xl font-bold">
+  <h2 slot="header" class="text-2xl font-extrabold">
     {timeEvent.name}
   </h2>
   <div class="flex gap-2 flex-col h-full">
