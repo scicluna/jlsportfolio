@@ -1,3 +1,4 @@
+import msu from "$lib/images/msu.png"
 import edXlogo from "$lib/images/edxlogo.png"
 import htmlcsslogo from "$lib/images/htmlcsslogo.png"
 import portfolio1 from "$lib/images/portfolio1.png"
@@ -48,6 +49,7 @@ export type Event = {
 }
 
 export const eventlist: Event[] = [
+    { id: -1, name: "Bachelor's Degree at MSU", short: "I started my educational journey by getting a degree at Michigan State University. I learned many things there, and my education there has proven invaluable.", img: msu, link: "https://www.msu.edu/", deploy: "" },
     { id: 0, name: "Edx MSU Bootcamp", short: "In November 2022, I began my coding journey at the edX MSU fullstack bootcamp. This is where I first encountered coding and instantly fell in love with it.", img: edXlogo, link: "https://www.edx.org/", deploy: "" },
     { id: 1, name: "HTML & CSS", short: "I swiftly learned HTML and CSS, utilizing them to craft simple websites. Grasping HTML was straightforward, but CSS initially posed challenges.", img: htmlcsslogo, link: "", deploy: "" },
     { id: 2, name: "First Portfolio", short: "Having laid my foundations, I constructed my first portfolio as a class project. Through this, I became adept at using various CSS layouts and mastered flexbox.", img: portfolio1, link: "https://github.com/scicluna/Scicluna-Professional-Portfolio", deploy: "" },

@@ -16,13 +16,15 @@
         class="w-full h-[80%] sm:h-[90%] object-cover object-left"
       />
     </a>
-    <div class="flex justify-around items-center bg-indigo-700 sm:h-[10%]">
-      <p class="sm:text-3xl text-xl font-bold">{project.name}</p>
+    <div class="flex justify-around items-center bg-indigo-500 sm:h-[10%]">
+      <p class="sm:text-3xl text-xl font-bold text-purple-100">
+        {project.name}
+      </p>
       <a href={project.git} target="_blank">
         <Icon
           data={github}
           scale={3}
-          class="text-purple-800 hover:text-purple-900"
+          class="text-purple-700 hover:text-purple-900"
         />
       </a>
     </div>

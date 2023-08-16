@@ -68,7 +68,7 @@
     </h5>
     <CloseButton
       on:click={() => (hidden2 = true)}
-      class="mb-4 dark:text-white"
+      class="mb-4 text-purple-800 hover:text-purple-950 font-extrabold dark:text-white hover:bg-transparent"
     />
   </div>
   <Sidebar>
@@ -79,7 +79,7 @@
         <SidebarItem
           on:click={() => (hidden2 = true)}
           label="Home"
-          class="hover:text-purple-800  {currentPage == ''
+          class="hover:text-purple-800 text-xl {currentPage == ''
             ? 'text-purple-800 dark:hover:text-purple-200'
             : 'text-purple-950 dark:text-purple-300'} font-extrabold dark:text-purple-300 hover:bg-transparent"
           href="/"
@@ -103,7 +103,7 @@
           on:click={() => (hidden2 = true)}
           label="Resume"
           {spanClass}
-          class="hover:text-purple-800  {currentPage == 'resume'
+          class="hover:text-purple-800 text-xl {currentPage == 'resume'
             ? 'text-purple-800 dark:hover:text-purple-200'
             : 'text-purple-950 dark:text-purple-300'} font-extrabold dark:text-purple-300 hover:bg-transparent"
           href="/resume"
@@ -131,7 +131,7 @@
           on:click={() => (hidden2 = true)}
           label="Contact"
           {spanClass}
-          class="hover:text-purple-800  {currentPage == 'contact'
+          class="hover:text-purple-800 text-xl {currentPage == 'contact'
             ? 'text-purple-800 dark:hover:text-purple-200'
             : 'text-purple-950 dark:text-purple-300'} font-extrabold dark:text-purple-300 hover:bg-transparent"
           href="/contact"
@@ -158,7 +158,7 @@
           on:click={() => (hidden2 = true)}
           label="Projects"
           {spanClass}
-          class="hover:text-purple-800  {currentPage == 'projects'
+          class="hover:text-purple-800 text-xl {currentPage == 'projects'
             ? 'text-purple-800 dark:hover:text-purple-200'
             : 'text-purple-950 dark:text-purple-300'} font-extrabold dark:text-purple-300 hover:bg-transparent"
           href="/projects"
