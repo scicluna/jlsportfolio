@@ -9,10 +9,7 @@
 
 <svelte:head>
   <title>John Lucas Scicluna Portfolio</title>
-  <meta
-    name="An aspiring software engineer - John Lucas Scicluna"
-    content="John Lucas Scicluna"
-  />
+  <meta name="description" content="John Scicluna Portfolio" />
 </svelte:head>
 
 <main>

@@ -1,13 +1,8 @@
 <script lang="ts">
   import {
     Drawer,
-    Button,
     CloseButton,
     Sidebar,
-    SidebarBrand,
-    SidebarCta,
-    SidebarDropdownItem,
-    SidebarDropdownWrapper,
     SidebarGroup,
     SidebarItem,
     SidebarWrapper,
@@ -29,7 +24,10 @@
 </script>
 
 <div class="text-center">
-  <button class="hover:scale-110" on:click={() => (hidden2 = false)}
+  <button
+    class="hover:scale-110"
+    on:click={() => (hidden2 = false)}
+    aria-label="Menu"
     ><svg
       fill="#000000"
       width="50px"
@@ -85,6 +83,7 @@
             ? 'text-purple-800 dark:hover:text-purple-200'
             : 'text-purple-950 dark:text-purple-300'} font-extrabold dark:text-purple-300 hover:bg-transparent"
           href="/"
+          aria-label="Return Home!"
         >
           <svelte:fragment slot="icon">
             <svg
@@ -108,6 +107,7 @@
             ? 'text-purple-800 dark:hover:text-purple-200'
             : 'text-purple-950 dark:text-purple-300'} font-extrabold dark:text-purple-300 hover:bg-transparent"
           href="/resume"
+          aria-label="See my Resume!"
         >
           <svelte:fragment slot="icon">
             <svg
@@ -135,6 +135,7 @@
             ? 'text-purple-800 dark:hover:text-purple-200'
             : 'text-purple-950 dark:text-purple-300'} font-extrabold dark:text-purple-300 hover:bg-transparent"
           href="/contact"
+          aria-label="Contact Me!"
         >
           <svelte:fragment slot="icon">
             <svg
@@ -161,6 +162,7 @@
             ? 'text-purple-800 dark:hover:text-purple-200'
             : 'text-purple-950 dark:text-purple-300'} font-extrabold dark:text-purple-300 hover:bg-transparent"
           href="/projects"
+          aria-label="See my Projects!"
         >
           <svelte:fragment slot="icon">
             <svg

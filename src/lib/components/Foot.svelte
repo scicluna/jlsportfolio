@@ -53,26 +53,32 @@
         class="text-xl {currentPage == ''
           ? 'text-purple-300'
           : 'text-white'} hover:text-purple-300"
-        href={"/"}>Home |</a
+        href={"/"}
+        aria-label="Return to Home!">Home |</a
       >
       <a
         class="text-xl {currentPage == 'resume'
           ? 'text-purple-300'
           : 'text-white'} hover:text-purple-300"
-        href={"/resume"}>Resume |</a
+        href={"/resume"}
+        aria-label="Check out my Resume!">Resume |</a
       >
       <a
         class="text-xl {currentPage == 'contact'
           ? 'text-purple-300'
           : 'text-white'} hover:text-purple-300"
-        href={"/contact"}>Contact Me |</a
+        href={"/contact"}
+        aria-label="Contact Me!">Contact Me |</a
       >
       <a
         class="text-xl {currentPage == 'projects'
           ? 'text-purple-300'
           : 'text-white'} hover:text-purple-300"
-        href={"/projects"}>Projects</a
+        href={"/projects"}
+        aria-label="Check out my Projects!"
       >
+        Projects
+      </a>
     </div>
   </div>
 </footer>
