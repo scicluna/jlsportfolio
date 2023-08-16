@@ -54,32 +54,38 @@
 </button>
 
 <Modal bind:showModal>
-  <h2 slot="header" class="text-2xl font-extrabold">
+  <h2 slot="header" class="sm:text-4xl text-2xl font-extrabold">
     {timeEvent.name}
   </h2>
-  <div class="flex gap-2 flex-col h-full">
+  <div class="flex gap-2 flex-col h-full mt-2">
     <div class="flex w-full justify-center">
       <img
         src={timeEvent.img}
         alt="..."
-        class="object-contain object-center h-72 w-96"
+        class="object-fill object-center h-72 w-fit"
       />
     </div>
+    <hr />
     <div class="flex">
-      <p class="text-base">{timeEvent.short}</p>
+      <p class="text-base text-left mb-2">{timeEvent.short}</p>
     </div>
   </div>
-  <div slot="footer" class="flex justify-around">
+  <div slot="footer" class="flex justify-around items-center h-auto">
     {#if timeEvent.link}
-      <a class="text-base text-blue-500" href={timeEvent.link} target="_blank"
+      <a
+        class="text-base text-blue-500 font-bold hover:text-blue-700"
+        href={timeEvent.link}
+        target="_blank"
         >{timeEvent.link.includes("github")
           ? "github"
           : timeEvent.link.split(".")[1]}</a
       >
     {/if}
     {#if timeEvent.deploy}
-      <a class="text-base text-blue-500" href={timeEvent.deploy} target="_blank"
-        >app</a
+      <a
+        class="text-base text-blue-500 font-bold hover:text-blue-700"
+        href={timeEvent.deploy}
+        target="_blank">app</a
       >
     {/if}
   </div>

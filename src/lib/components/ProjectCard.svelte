@@ -6,20 +6,21 @@
 </script>
 
 <div
-  class="flex justify-center items-center object-cover hover:scale-105 transition-all duration-200 relative sm:h-auto h-40"
+  class="flex justify-center items-center object-cover hover:scale-105 transition-all duration-200 relative sm:h-auto h-52"
 >
   <div class="h-full w-full shadow-lg shadow-indigo-800 object-fill">
     <a href={project.app} target="_blank">
-      <img src={project.img} alt="project" class="h-full w-full" />
+      <img src={project.img} alt="project" class="w-full h-[80%] sm:h-[90%]" />
     </a>
-  </div>
-  <div class="md:w-16 md:h-16 h-12 w-12 flex items-center absolute bottom-0">
-    <a href={project.git} target="_blank">
-      <Icon
-        data={github}
-        scale={3}
-        class="text-purple-700 hover:text-purple-900"
-      />
-    </a>
+    <div class="flex justify-around items-center bg-indigo-700 sm:h-[10%]">
+      <p class="sm:text-3xl text-xl font-bold">{project.name}</p>
+      <a href={project.git} target="_blank">
+        <Icon
+          data={github}
+          scale={3}
+          class="text-purple-800 hover:text-purple-900"
+        />
+      </a>
+    </div>
   </div>
 </div>

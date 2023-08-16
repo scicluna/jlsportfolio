@@ -5,7 +5,7 @@ import jslogo from "$lib/images/JS.svg.png"
 import dice from "$lib/images/dice.png"
 import ttt from "$lib/images/TTT.png"
 import speedreader from "$lib/images/speedreader2.png"
-import password from "$lib/images/password.png"
+import password2 from "$lib/images/password2.png"
 import jsquiz from "$lib/images/jsquiz.png"
 import scheduler from "$lib/images/scheduler.png"
 import weather from "$lib/images/weatherapp.png"
@@ -56,7 +56,7 @@ export const eventlist: Event[] = [
     { id: 5, name: "Tic Tac Toe", short: "I constructed a tic-tac-toe game using JavaScript, HTML, and CSS. This undertaking provided an enriching experience in algorithmic coding. Check it out at the deploy link.", img: ttt, link: "https://github.com/scicluna/tic-tac-toe2", deploy: "https://scicluna.github.io/tic-tac-toe2/" },
     { id: 6, name: "Speed Reader", short: "A project where pasted text is cycled through at set intervals, displaying each word. It was an engaging introduction to setInterval. As a quirky addition, I synced the word timing with extremely loud music.", img: speedreader, link: "https://github.com/scicluna/speedreader", deploy: "https://scicluna.github.io/speedreader/" },
     { id: 7, name: "Dice Roller v3", short: "Post-learning about object-oriented programming, I revamped my dice-roller. Completely built using OOP, it solidified my understanding of this coding pattern, proving more expansive than my initial version.", img: dice, link: "https://github.com/scicluna/dice-rollerv3", deploy: "https://scicluna.github.io/dice-rollerv3/" },
-    { id: 8, name: "Password Generator", short: "I developed a password generator that prompts users with questions to create a password. While functional, it humorously demonstrated the pitfalls of excessively prompting users in a web app via window alerts.", img: password, link: "https://github.com/scicluna/password-generator", deploy: "https://scicluna.github.io/password-generator/" },
+    { id: 8, name: "Password Generator", short: "I developed a password generator that prompts users with questions to create a password. While functional, it humorously demonstrated the pitfalls of excessively prompting users in a web app via window alerts.", img: password2, link: "https://github.com/scicluna/password-generator", deploy: "https://scicluna.github.io/password-generator/" },
     { id: 9, name: "Javascript Quiz", short: "This project required advanced DOM manipulation to simulate a single-page application feel. It wasn't a true SPA, but I employed numerous transitions and techniques in vanilla JavaScript. Additionally, it pushed me to further my JavaScript knowledge.", img: jsquiz, link: "https://github.com/scicluna/js-quiz", deploy: "https://scicluna.github.io/js-quiz/" },
     { id: 10, name: "Scheduler", short: "The scheduler app introduced me to jQuery, showcasing its pros and cons compared to more modern programming patterns. It also leveraged an external library, dayjs, for date handling and made me familiar with integrating external packages.", img: scheduler, link: "https://github.com/scicluna/scheduler", deploy: "https://scicluna.github.io/scheduler/" },
     { id: 11, name: "Weather App", short: "To familiarize myself with external APIs, I crafted a weather app using openweatherAPI. It provides forecasts for the next seven days for both day and night. I also integrated a darkmode/lightmode layout here as a bonus added touch.", img: weather, link: "https://github.com/scicluna/weather-app", deploy: "scicluna.github.io/weather-app/" },

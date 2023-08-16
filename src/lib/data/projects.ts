@@ -6,6 +6,7 @@ import socialfullstack from "$lib/images/socialmediademo.png"
 import chatroom from "$lib/images/voidchat2.png"
 
 export type Project = {
+    name: string
     img: string
     app: string
     git: string
@@ -13,8 +14,8 @@ export type Project = {
 }
 
 export const projects: Project[] = [
-    { img: proxichat, app: "https://proxichat.vercel.app/", git: "https://github.com/scicluna/proxichat", id: 1 },
-    { img: trailblazer, app: "https://nps-trailblazer.herokuapp.com/", git: "https://github.com/scicluna/trailblazer", id: 2 },
-    { img: tablemaker, app: "https://tablemaker.vercel.app/", git: "https://github.com/scicluna/tablemaker", id: 3 },
-    { img: chatroom, app: "https://voidchat.herokuapp.com/", git: "https://github.com/scicluna/chatroomdemo", id: 4 }
+    { name: 'Proxichat', img: proxichat, app: "https://proxichat.vercel.app/", git: "https://github.com/scicluna/proxichat", id: 1 },
+    { name: 'Trailblazer', img: trailblazer, app: "https://nps-trailblazer.herokuapp.com/", git: "https://github.com/scicluna/trailblazer", id: 2 },
+    { name: 'Tablemaker', img: tablemaker, app: "https://tablemaker.vercel.app/", git: "https://github.com/scicluna/tablemaker", id: 3 },
+    { name: 'Voidchat', img: chatroom, app: "https://voidchat.herokuapp.com/", git: "https://github.com/scicluna/chatroomdemo", id: 4 }
 ]
