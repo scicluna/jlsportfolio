@@ -25,7 +25,11 @@
         <div
           class="md:w-16 md:h-16 h-12 w-12 flex items-center hover:text-purple-300"
         >
-          <a href={"https://github.com/scicluna/"} target="_blank">
+          <a
+            href={"https://github.com/scicluna/"}
+            target="_blank"
+            aria-label="Check out my github!"
+          >
             <Icon data={github} scale={3} />
           </a>
         </div>
@@ -35,6 +39,7 @@
           <a
             href={"https://www.linkedin.com/in/john-scicluna-472291bb/"}
             target="_blank"
+            aria-label="Check out my linkedin!"
           >
             <Icon data={linkedinSquare} scale={3} />
           </a>
@@ -42,7 +47,11 @@
         <div
           class="md:w-16 md:h-16 h-12 w-12 flex items-center hover:text-purple-300"
         >
-          <a href={"mailto:sciclunajl@gmail.com"} target="_blank">
+          <a
+            href={"mailto:sciclunajl@gmail.com"}
+            target="_blank"
+            aria-label="Email me!"
+          >
             <Icon data={envelopeO} scale={3} />
           </a>
         </div>
