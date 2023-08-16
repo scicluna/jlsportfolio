@@ -6,11 +6,15 @@
 </script>
 
 <div
-  class="flex justify-center items-center object-cover hover:scale-105 transition-all duration-200 relative sm:h-auto h-52"
+  class="flex justify-center items-center hover:scale-105 transition-all duration-200 relative sm:h-auto h-52"
 >
-  <div class="h-full w-full shadow-lg shadow-indigo-800 object-fill">
+  <div class="h-full w-full shadow-lg shadow-indigo-800">
     <a href={project.app} target="_blank">
-      <img src={project.img} alt="project" class="w-full h-[80%] sm:h-[90%]" />
+      <img
+        src={project.img}
+        alt="project"
+        class="w-full h-[80%] sm:h-[90%] object-cover object-left"
+      />
     </a>
     <div class="flex justify-around items-center bg-indigo-700 sm:h-[10%]">
       <p class="sm:text-3xl text-xl font-bold">{project.name}</p>
