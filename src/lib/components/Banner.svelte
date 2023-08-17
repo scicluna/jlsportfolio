@@ -1,5 +1,5 @@
 <script>
-  import Banner from "$lib/images/Banner5.5.webp"
+  import Banner from "$lib/images/Banner5.6.webp"
   import coolLines from "$lib/video/coollines3.webm"
   import snapshot from "$lib/images/snap2.webp"
 </script>
