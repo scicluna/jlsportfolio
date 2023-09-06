@@ -1,4 +1,4 @@
-import resume from '$lib/resume/resume.pdf'
+import resume from '$lib/resume/resume2.pdf'
 import type { PageLoad } from './$types.js'
 
 export const load = (() => {
