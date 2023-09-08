@@ -14,9 +14,9 @@
     See my Projects!
   </a>
   <img alt="me!" src={Banner} class="z-20 object-cover h-full w-full" />
-  <p class="absolute right-5 text-2xl text-slate-800 font-extrabold z-20">
-    JLS
-  </p>
+  <h1 class="absolute right-5 text-2xl text-slate-800 font-extrabold z-20">
+    John Lucas Scicluna
+  </h1>
   <!-- svelte-ignore a11y-media-has-caption -->
   <video
     src={coolLines}
