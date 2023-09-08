@@ -1,3 +1,8 @@
+<svelte:head>
+  <title>John Lucas Scicluna Portfolio</title>
+  <meta name="description" content="John Scicluna Portfolio Contact" />
+</svelte:head>
+
 <main
   class="h-[100dvh] bg-indigo-700 dark:bg-indigo-900 relative flex flex-col justify-center items-center p-5 sm:p-10"
 >

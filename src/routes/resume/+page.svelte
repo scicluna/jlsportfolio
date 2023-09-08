@@ -3,6 +3,11 @@
   export let data: PageData
 </script>
 
+<svelte:head>
+  <title>John Lucas Scicluna Portfolio</title>
+  <meta name="description" content="John Scicluna Portfolio Resume" />
+</svelte:head>
+
 <main class="h-[100dvh] bg-indigo-700 dark:bg-indigo-900 relative">
   <a
     class="absolute left-[5%] top-1/2 text-xl sm:text-3xl text-blue-500 dark:text-slate-100 font-extrabold hover:scale-110 cursor-pointer sm:flex hidden"
