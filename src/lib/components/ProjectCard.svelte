@@ -9,7 +9,10 @@
   class="flex justify-center items-center hover:scale-105 transition-all duration-200 relative sm:h-auto h-52"
 >
   <div class="h-full w-full shadow-lg shadow-indigo-800">
-    <a href={project.app} target="_blank">
+    <a
+      href={project.app === "Not Deployed" ? project.git : project.app}
+      target="_blank"
+    >
       <img
         src={project.img}
         alt="project"
