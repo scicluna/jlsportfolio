@@ -7,21 +7,21 @@
 	<meta name="viewport" content="width=device-width" />
 	<meta name="google-site-verification" content="n6eAplDt-aZmEIog6YHZgnzBuSac24SKVs6Cs13wLx8" />
 
-	<link href="./_app/immutable/assets/0.a6033402.css" rel="stylesheet">
-	<link href="./_app/immutable/assets/github.cb0c4400.css" rel="stylesheet">
-	<link href="./_app/immutable/assets/2.7474fb52.css" rel="stylesheet">
-	<link rel="modulepreload" href="./_app/immutable/entry/start.f451d9cc.js">
-	<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.63e23178.js">
-	<link rel="modulepreload" href="./_app/immutable/chunks/singletons.0a0fe257.js">
-	<link rel="modulepreload" href="./_app/immutable/chunks/paths.3fea75a0.js">
-	<link rel="modulepreload" href="./_app/immutable/entry/app.bea2fe3b.js">
-	<link rel="modulepreload" href="./_app/immutable/chunks/index.383ef100.js">
-	<link rel="modulepreload" href="./_app/immutable/nodes/0.891fbb51.js">
-	<link rel="modulepreload" href="./_app/immutable/chunks/index.3192b696.js">
-	<link rel="modulepreload" href="./_app/immutable/chunks/github.c6cb1f1e.js">
-	<link rel="modulepreload" href="./_app/immutable/chunks/each.26cc0e45.js">
-	<link rel="modulepreload" href="./_app/immutable/nodes/2.4a5cadac.js">
-	<link rel="modulepreload" href="./_app/immutable/chunks/proxichat5.7c8364ee.js">
+	<link href="./_app/build/immutable/assets/0.a6033402.css" rel="stylesheet">
+	<link href="./_app/build/immutable/assets/github.cb0c4400.css" rel="stylesheet">
+	<link href="./_app/build/immutable/assets/2.7474fb52.css" rel="stylesheet">
+	<link rel="modulepreload" href="./_app/build/immutable/entry/start.f451d9cc.js">
+	<link rel="modulepreload" href="./_app/build/immutable/chunks/scheduler.63e23178.js">
+	<link rel="modulepreload" href="./_app/build/immutable/chunks/singletons.0a0fe257.js">
+	<link rel="modulepreload" href="./_app/build/immutable/chunks/paths.3fea75a0.js">
+	<link rel="modulepreload" href="./_app/build/immutable/entry/app.bea2fe3b.js">
+	<link rel="modulepreload" href="./_app/build/immutable/chunks/index.383ef100.js">
+	<link rel="modulepreload" href="./_app/build/immutable/nodes/0.891fbb51.js">
+	<link rel="modulepreload" href="./_app/build/immutable/chunks/index.3192b696.js">
+	<link rel="modulepreload" href="./_app/build/immutable/chunks/github.c6cb1f1e.js">
+	<link rel="modulepreload" href="./_app/build/immutable/chunks/each.26cc0e45.js">
+	<link rel="modulepreload" href="./_app/build/immutable/nodes/2.4a5cadac.js">
+	<link rel="modulepreload" href="./_app/build/immutable/chunks/proxichat5.7c8364ee.js">
 	<title>John Lucas Scicluna Portfolio</title><!-- HEAD_svelte-h046sn_START -->
 	<meta name="description" content="John Scicluna Portfolio"><!-- HEAD_svelte-h046sn_END -->
 </head>
@@ -44,12 +44,12 @@
 			<div class="sm:h-[100dvh] h-[75dvh] flex justify-center items-end relative bg-transparent z-10"><a
 					class="absolute bottom-10 right-5 flex justify-center items-center text-white shadow-black shadow-md hover:shadow-lg font-bold text-xl bg-purple-600 hover:bg-purple-800 hover:scale-105 rounded-full z-30 h-20 w-56"
 					href="/svelteportfolio/projects">See my Projects!</a> <img alt="me!"
-					src="/svelteportfolio/_app/immutable/assets/Banner5.6.941e4593.webp"
+					src="/svelteportfolio/_app/build/immutable/assets/Banner5.6.941e4593.webp"
 					class="z-20 object-cover h-full w-full">
 				<h1 class="absolute right-5 text-2xl text-slate-800 font-extrabold z-20" data-svelte-h="svelte-1274wuf">
 					John Lucas Scicluna</h1> <video
-					src="/svelteportfolio/_app/immutable/assets/coollines3.d3ea8552.webm" muted
-					poster="/svelteportfolio/_app/immutable/assets/snap2.25387152.webp" autoplay loop
+					src="/svelteportfolio/_app/build/immutable/assets/coollines3.d3ea8552.webm" muted
+					poster="/svelteportfolio/_app/build/immutable/assets/snap2.25387152.webp" autoplay loop
 					class="bg-white h-full w-full absolute object-cover"></video>
 			</div>
 			<div class="text-justify w-full p-4 bg-indigo-950 text-slate-200" id="about" data-svelte-h="svelte-16ndnjr">
@@ -174,7 +174,7 @@
 		<script>
 			{
 				__sveltekit_29wlmf = {
-					assets: "/svelteportfolio/build",
+					assets: "/svelteportfolio",
 					base: new URL(".", location).pathname.slice(0, -1),
 					env: {}
 				};
@@ -184,8 +184,8 @@
 				const data = [{ "type": "data", "data": null, "uses": {} }, null];
 
 				Promise.all([
-					import("./_app/immutable/entry/start.f451d9cc.js"),
-					import("./_app/immutable/entry/app.bea2fe3b.js")
+					import("./_app/build/immutable/entry/start.f451d9cc.js"),
+					import("./_app/build/immutable/entry/app.bea2fe3b.js")
 				]).then(([kit, app]) => {
 					kit.start(app, element, {
 						node_ids: [0, 2],
