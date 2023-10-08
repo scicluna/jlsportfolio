@@ -1,0 +1,2 @@
+to publish to github pages -> svelteconfig -> change adapter to static -> uncomment path -> npm run build -> npm run deploy
+to publish to vercel -> svelteconfig -> change adapter to auto -> comment path out -> git add -A -> git commit -> git push

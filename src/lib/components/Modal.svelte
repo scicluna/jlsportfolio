@@ -14,8 +14,11 @@
   class="sm:w-1/3 w-[95%]"
 >
   <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div on:click|stopPropagation class="relative h-1/2">
-    <button on:click={() => dialog.close()} class="absolute top-4 right-4">
+  <div on:click|stopPropagation class="relative h-[80dvh] bg-indigo-200">
+    <button
+      on:click={() => dialog.close()}
+      class="absolute top-4 right-4 font-mono"
+    >
       <svg
         fill="#000000"
         height="20px"

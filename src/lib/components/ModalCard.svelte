@@ -10,7 +10,7 @@
 </script>
 
 <button
-  class="relative bg-purple-100 hover:bg-purple-300 sm:p-10 p-5 h-full min-w-[20dvw] w-fit flex items-center justify-center hover:cursor-pointer transition-all duration-150 rounded-lg shadow-indigo-950 shadow-md"
+  class="relative bg-purple-100 hover:bg-indigo-200 sm:p-10 p-5 h-full min-w-[20dvw] w-fit flex items-center justify-center hover:cursor-pointer transition-all duration-300 rounded-lg shadow-indigo-950 shadow-md"
   on:click={() => (showModal = true)}
 >
   <p class="font-bold">
@@ -54,23 +54,25 @@
 </button>
 
 <Modal bind:showModal>
-  <h2 slot="header" class="sm:text-4xl text-2xl font-extrabold">
+  <h2 slot="header" class="sm:text-4xl text-2xl font-extrabold font-serif">
     {timeEvent.name}
   </h2>
-  <div class="flex gap-2 flex-col h-full mt-2">
+  <div class="flex gap-2 flex-col h-fit mt-2">
     <div class="flex w-full justify-center">
       <img
         src={timeEvent.img}
         alt="..."
-        class="object-fill object-center h-72 w-fit"
+        class="object-fill object-left h-[40dvh] w-full"
       />
     </div>
     <hr />
-    <div class="flex">
-      <p class="text-base text-left mb-2">{timeEvent.short}</p>
+    <div class="flex min-h-[25dvh]">
+      <p class="font-bold text-base text-left mb-2 font-serif">
+        {timeEvent.short}
+      </p>
     </div>
   </div>
-  <div slot="footer" class="flex justify-around items-center h-auto">
+  <div slot="footer" class="flex justify-around items-center h-auto p-2">
     {#if timeEvent.link}
       <a
         class="text-base text-blue-500 font-bold hover:text-blue-700"

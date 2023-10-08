@@ -27,7 +27,7 @@
 
 <div class="text-center">
   <button
-    class="hover:scale-110"
+    class="hover:scale-[1.1] transition-all duration-300"
     on:click={() => (hidden2 = false)}
     aria-label="Menu"
     ><svg

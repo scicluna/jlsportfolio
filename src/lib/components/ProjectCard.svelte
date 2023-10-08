@@ -6,7 +6,7 @@
 </script>
 
 <div
-  class="flex justify-center items-center hover:scale-105 transition-all duration-200 relative sm:h-auto h-52"
+  class="flex justify-center items-center hover:scale-[1.01] transition-all duration-500 relative sm:h-auto h-52"
 >
   <div class="h-full w-full shadow-lg shadow-indigo-800">
     <a

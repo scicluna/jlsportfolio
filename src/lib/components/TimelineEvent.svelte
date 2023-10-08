@@ -1,8 +1,7 @@
 <script lang="ts">
   import { onMount, afterUpdate } from "svelte"
   import { fly } from "svelte/transition"
-  import { draw } from "svelte/transition"
-  import { cubicIn, cubicOut, quintOut } from "svelte/easing"
+  import { quintOut } from "svelte/easing"
   import type { Event } from "$lib/data/eventlist.js"
   import ModalCard from "./ModalCard.svelte"
 

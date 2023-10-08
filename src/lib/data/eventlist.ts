@@ -1,6 +1,6 @@
 import msu from "$lib/images/msu.png"
 import edXlogo from "$lib/images/edxlogo.png"
-import htmlcsslogo from "$lib/images/htmlcsslogo.png"
+import htmlcsslogo from "$lib/images/HTML-CSS.png"
 import portfolio1 from "$lib/images/portfolio1.png"
 import jslogo from "$lib/images/JS.svg.png"
 import dice from "$lib/images/dice.png"
