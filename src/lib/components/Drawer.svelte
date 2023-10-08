@@ -9,6 +9,8 @@
   } from "flowbite-svelte"
   import { sineIn } from "svelte/easing"
   import { afterNavigate } from "$app/navigation"
+  import { base } from "$app/paths"
+
   let hidden2 = true
   let spanClass = "flex-1 ml-3 whitespace-nowrap"
   let transitionParams = {
@@ -82,7 +84,7 @@
           class="hover:text-purple-800 text-xl {currentPage == ''
             ? 'text-purple-800 dark:hover:text-purple-200'
             : 'text-purple-950 dark:text-purple-300'} font-extrabold dark:text-purple-300 hover:bg-transparent"
-          href="/"
+          href="{base}/"
           aria-label="Return Home!"
         >
           <svelte:fragment slot="icon">
@@ -106,7 +108,7 @@
           class="hover:text-purple-800 text-xl {currentPage == 'resume'
             ? 'text-purple-800 dark:hover:text-purple-200'
             : 'text-purple-950 dark:text-purple-300'} font-extrabold dark:text-purple-300 hover:bg-transparent"
-          href="/resume"
+          href="{base}/resume"
           aria-label="See my Resume!"
         >
           <svelte:fragment slot="icon">
@@ -134,7 +136,7 @@
           class="hover:text-purple-800 text-xl {currentPage == 'contact'
             ? 'text-purple-800 dark:hover:text-purple-200'
             : 'text-purple-950 dark:text-purple-300'} font-extrabold dark:text-purple-300 hover:bg-transparent"
-          href="/contact"
+          href="{base}/contact"
           aria-label="Contact Me!"
         >
           <svelte:fragment slot="icon">
@@ -161,7 +163,7 @@
           class="hover:text-purple-800 text-xl {currentPage == 'projects'
             ? 'text-purple-800 dark:hover:text-purple-200'
             : 'text-purple-950 dark:text-purple-300'} font-extrabold dark:text-purple-300 hover:bg-transparent"
-          href="/projects"
+          href="{base}/projects"
           aria-label="See my Projects!"
         >
           <svelte:fragment slot="icon">

@@ -5,6 +5,7 @@
   import github from "svelte-awesome/icons/github"
   import envelopeO from "svelte-awesome/icons/envelopeO"
   import { afterNavigate } from "$app/navigation"
+  import { base } from "$app/paths"
 
   let currentPage = ""
 
@@ -62,28 +63,28 @@
         class="text-xl {currentPage == ''
           ? 'text-purple-300'
           : 'text-white'} hover:text-purple-300"
-        href={"/"}
+        href="{base}/"
         aria-label="Return to Home!">Home |</a
       >
       <a
         class="text-xl {currentPage == 'resume'
           ? 'text-purple-300'
           : 'text-white'} hover:text-purple-300"
-        href={"/resume"}
+        href="{base}/resume"
         aria-label="Check out my Resume!">Resume |</a
       >
       <a
         class="text-xl {currentPage == 'contact'
           ? 'text-purple-300'
           : 'text-white'} hover:text-purple-300"
-        href={"/contact"}
+        href="{base}/contact"
         aria-label="Contact Me!">Contact Me |</a
       >
       <a
         class="text-xl {currentPage == 'projects'
           ? 'text-purple-300'
           : 'text-white'} hover:text-purple-300"
-        href={"/projects"}
+        href="{base}/projects"
         aria-label="Check out my Projects!"
       >
         Projects

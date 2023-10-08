@@ -2,6 +2,7 @@
   import Banner from "$lib/images/Banner5.6.webp"
   import coolLines from "$lib/video/coollines3.webm"
   import snapshot from "$lib/images/snap2.webp"
+  import { base } from "$app/paths"
 </script>
 
 <div
@@ -9,7 +10,7 @@
 >
   <a
     class="absolute bottom-10 right-5 flex justify-center items-center text-white shadow-black shadow-md hover:shadow-lg font-bold text-xl bg-purple-600 hover:bg-purple-800 hover:scale-105 rounded-full z-30 h-20 w-56"
-    href="/projects"
+    href="{base}/projects"
   >
     See my Projects!
   </a>
